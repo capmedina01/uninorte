@@ -1,0 +1,8 @@
+CREATE TABLE [cuerposAgua] (
+[id] INTEGER  NOT NULL PRIMARY KEY,
+[nombre] VARCHAR(50)  NOT NULL,
+[municipio] VARCHAR(50)  NOT NULL,
+[tipoCuerpo] VARCHAR(50)  NOT NULL,
+[tipoAgua] VARCHAR(50)  NOT NULL,
+[irca] FLOAT  NOT NULL
+)

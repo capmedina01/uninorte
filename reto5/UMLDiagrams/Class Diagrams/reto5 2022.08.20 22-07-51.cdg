@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="reto5">
+  <ClassDiagramComponents>
+    <Class name="GestionAnalisis" package="Controller" visibility="public" xPosition="16.0" yPosition="356.0">
+      <Fields>
+        <Field name="cuerpos" type="ArrayList&lt;CuerpoDeAgua&gt;" visibility="public" isStatic="true"/>
+        <Field name="densidades" type="ArrayList&lt;DensidadPoblacional&gt;" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="capturarDatos" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="tipoCuerpoAgua"/>
+          <Argument type="String" name="tipoAgua"/>
+          <Argument type="String" name="irca"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="idCuerpoDeAgua"/>
+          <Argument type="String" name="municipio"/>
+          <Argument type="String" name="densidad"/>
+        </Method>
+        <Method name="Analisis" returnType="ArrayList&lt;String&gt;" visibility="public" isStatic="true"/>
+        <Method name="nivelAfectacciones" returnType="ArrayList&lt;String&gt;" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="CuerpoDeAgua" package="Model" visibility="public" xPosition="968.0" yPosition="299.0">
+      <Fields>
+        <Field name="tipoCuerpoAgua" type="String" visibility="private"/>
+        <Field name="tipoAgua" type="String" visibility="private"/>
+        <Field name="irca" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="tipoCuerpoAgua"/>
+          <Argument type="String" name="tipoAgua"/>
+          <Argument type="float" name="irca"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="idCuerpoDeAgua"/>
+          <Argument type="String" name="municipio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="nivel" returnType="String" visibility="public"/>
+        <Method name="getTipoCuerpoAgua" returnType="String" visibility="public"/>
+        <Method name="setTipoCuerpoAgua" returnType="void" visibility="public">
+          <Argument type="String" name="tipoCuerpoAgua"/>
+        </Method>
+        <Method name="getTipoAgua" returnType="String" visibility="public"/>
+        <Method name="setTipoAgua" returnType="void" visibility="public">
+          <Argument type="String" name="tipoAgua"/>
+        </Method>
+        <Method name="getIrca" returnType="float" visibility="public"/>
+        <Method name="setIrca" returnType="void" visibility="public">
+          <Argument type="float" name="irca"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DensidadPoblacional" package="Model" visibility="public" xPosition="167.0" yPosition="26.0">
+      <Fields>
+        <Field name="numhabitantes" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="numhabitantes"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="idCuerpoDeAgua"/>
+          <Argument type="String" name="municipio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="afeccion" returnType="String" visibility="public"/>
+        <Method name="getNumhabitantes" returnType="int" visibility="public"/>
+        <Method name="setNumhabitantes" returnType="void" visibility="public">
+          <Argument type="int" name="numhabitantes"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ObjetoGeografico" package="Model" visibility="public" xPosition="1098.0" yPosition="-2.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="idCuerpoDeAgua" type="int" visibility="private"/>
+        <Field name="municipio" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="idCuerpoDeAgua"/>
+          <Argument type="String" name="municipio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getIdCuerpoDeAgua" returnType="int" visibility="public"/>
+        <Method name="setIdCuerpoDeAgua" returnType="void" visibility="public">
+          <Argument type="int" name="idCuerpoDeAgua"/>
+        </Method>
+        <Method name="getMunicipio" returnType="String" visibility="public"/>
+        <Method name="setMunicipio" returnType="void" visibility="public">
+          <Argument type="String" name="municipio"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FormularioAnalisis" package="view" visibility="public" xPosition="1734.0" yPosition="15.0">
+      <Fields>
+        <Field name="filas" type="DefaultListModel" visibility="public"/>
+        <Field name="lista" type="ArrayList&lt;String&gt;" visibility="public"/>
+        <Field name="btnAdicionar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnAnalisis" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane4" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="listaAdicionar" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="listaDensidad" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="listaResultado" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="txtClasificacion" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtDensidad" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtID" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtMunicipio" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtNombre" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtTipoAgua" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtTipoCuerpo" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnAdicionarMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="limpiar" returnType="void" visibility="public"/>
+        <Method name="btnAnalisisMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="txtIDFocusLost" returnType="void" visibility="private">
+          <Argument type="java.awt.event.FocusEvent" name="evt"/>
+        </Method>
+        <Method name="btnAdicionarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtIDKeyTyped" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtNombreKeyTyped" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtMunicipioKeyTyped" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtDensidadKeyTyped" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtTipoCuerpoKeyTyped" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtTipoAguaKeyTyped" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtClasificacionKeyTyped" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="cuerpos" source="Controller.GestionAnalisis" target="Model.CuerpoDeAgua" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;CuerpoDeAgua&gt;"/>
+    <IsRelation name="is" source="Model.DensidadPoblacional" target="Model.ObjetoGeografico"/>
+    <IsRelation name="is" source="Model.CuerpoDeAgua" target="Model.ObjetoGeografico"/>
+    <HasRelation name="densidades" source="Controller.GestionAnalisis" target="Model.DensidadPoblacional" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;DensidadPoblacional&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
